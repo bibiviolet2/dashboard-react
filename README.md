@@ -6,8 +6,8 @@ stáhněte si repo
 
 spusťte:
 ```shell script
-npm install
-npm run build
+yarn install
+yarn build
 npx serve
 ```
 
