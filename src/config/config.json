@@ -1,0 +1,19 @@
+{
+  "debug": true,
+  "lang": "en",
+  "endpoints": {
+    "posts": "https://jsonplaceholder.typicode.com/posts",
+    "comments": "https://jsonplaceholder.typicode.com/comments",
+    "users": "https://jsonplaceholder.typicode.com/users"
+  },
+  "fetchDelay": 0,
+  "list": {
+    "pager": {
+      "perPage": 10
+    },
+    "placeholders": 10
+  },
+  "comments": {
+    "placeholders": 3
+  }
+}

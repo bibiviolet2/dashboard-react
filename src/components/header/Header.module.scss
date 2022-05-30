@@ -1,0 +1,24 @@
+.header {
+    background: var(--header-bg);
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+    padding: calc(var(--unit) * 2) 0;
+
+    > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h1 {
+        color: var(--header-color);
+        font-size: calc(var(--font-unit) * 2);
+        margin: 0;
+        padding: 0;
+
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.list {
+    padding: calc(var(--unit) * 2) 0;
+}
+
+.next-posts {
+    padding: calc(var(--unit) * 2) 0 0 0;
+    text-align: center;
+
+    button {
+        background: var(--secondary-color);
+        color: #fff;
+        border: 1px solid var(--primary-color);
+        padding: 8px 20px;
+        border-radius: 3px;
+        font-size: var(--font-unit);
+        transition: background-color ease 300ms;
+
+        &:hover {
+            background: var(--primary-color);
+            cursor: pointer;
+        }
+    }
+}

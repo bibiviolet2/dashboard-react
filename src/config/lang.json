@@ -1,0 +1,38 @@
+{
+  "cs": {
+    "header": {
+      "title": "Nástěnka"
+    },
+    "lang": {
+      "cs": "Česky",
+      "en": "English"
+    },
+    "post": {
+      "showMore": "Více...",
+      "comments": "Komentáře",
+      "nextPosts": "Další příspěvky"
+    },
+    "detail": {
+      "comments": "Komentáře",
+      "back": "Zpět"
+    }
+  },
+  "en": {
+    "header": {
+      "title": "Dashboard"
+    },
+    "lang": {
+      "cs": "Česky",
+      "en": "English"
+    },
+    "post": {
+      "showMore": "Show more...",
+      "comments": "Comments",
+      "nextPosts": "Next posts"
+    },
+    "detail": {
+      "comments": "Comments",
+      "back": "Back"
+    }
+  }
+}

@@ -1,0 +1,114 @@
+$breakpoints: (
+    xxs: 370px,
+    xs: 420px,
+    sm: 640px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1200px,
+    xxl: 1500px,
+    xxxl: 2200px,
+);
+
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+@mixin respond-above($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+        @media screen and (min-width: $breakpoint-value) {
+            @content;
+        }
+    } @else {
+        @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+}
+
+@mixin respond-below($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+        @media screen and (max-width: ($breakpoint-value - 1)) {
+            @content;
+        }
+    } @else {
+        @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+}
+
+@mixin respond-between($lower, $upper) {
+    @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper)
+    {
+        $lower-breakpoint: map-get($breakpoints, $lower);
+        $upper-breakpoint: map-get($breakpoints, $upper);
+
+        @media screen and (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+            @content;
+        }
+    } @else {
+        @if (map-has-key($breakpoints, $lower) == false) {
+            @warn 'Your lower breakpoint was invalid: #{$lower}.';
+        }
+
+        @if (map-has-key($breakpoints, $upper) == false) {
+            @warn 'Your upper breakpoint was invalid: #{$upper}.';
+        }
+    }
+}
+
+@mixin placeholder {
+    background: linear-gradient(
+        270deg,
+        #ffffff,
+        #e0eaf1,
+        #ffffff,
+        #e0eaf1,
+        #ffffff,
+        #e0eaf1
+    );
+    background-size: 1200% 1200%;
+
+    -webkit-animation: placeholder 30s ease infinite;
+    -moz-animation: placeholder 30s ease infinite;
+    animation: placeholder 30s ease infinite;
+    border-radius: var(--border-radius);
+}
+
+@-webkit-keyframes placeholder {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@-moz-keyframes placeholder {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes placeholder {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

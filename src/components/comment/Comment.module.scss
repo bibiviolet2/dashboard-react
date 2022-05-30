@@ -1,0 +1,26 @@
+@import '../../global-styles/mixins';
+
+.comment {
+    + .comment {
+        margin: var(--unit) 0 0 0;
+    }
+
+    &:not(.placeholder) {
+        + .comment {
+            border-top: 1px solid var(--border-color);
+            padding: var(--unit) 0 0 0;
+        }
+    }
+}
+
+.title {
+    color: #000000;
+}
+
+.placeholder {
+    @include placeholder;
+}
+
+.comment.placeholder {
+    min-height: 100px;
+}

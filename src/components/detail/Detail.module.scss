@@ -1,0 +1,66 @@
+@import '../../global-styles/mixins';
+
+.detail {
+    background: var(--post-item-bg);
+    padding: var(--unit);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    margin: calc(var(--unit) * 2) 0;
+
+    h2 {
+        margin: 0 0 calc(var(--unit) * 1.5) calc((var(--unit) * -1) - 1px);
+        padding: 0 0 0 var(--unit);
+        border-left: 2px solid var(--primary-color);
+        font-size: calc(var(--font-unit) * 1.7);
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+
+    h3 {
+        margin: calc(var(--unit) * 2) 0 calc(var(--unit) * 1.5)
+            calc((var(--unit) * -1) - 1px);
+        padding: 0 0 0 var(--unit);
+        border-left: 2px solid var(--primary-color);
+        font-size: calc(var(--font-unit) * 1.2);
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+}
+
+.back {
+    margin: calc(var(--unit) * 0.2) 0;
+    float: right;
+
+    a {
+        display: inline-block;
+        background: var(--secondary-color);
+        color: #fff;
+        border: 1px solid var(--primary-color);
+        padding: 8px 20px;
+        border-radius: 3px;
+        font-size: var(--font-unit);
+        transition: background-color ease 300ms;
+        text-decoration: none;
+
+        &:hover {
+            background: var(--primary-color);
+            cursor: pointer;
+        }
+    }
+}
+
+.placeholder {
+    @include placeholder;
+}
+
+.detail.placeholder {
+    min-height: 400px;
+}
+
+.author {
+    color: #000;
+}
+
+.author.placeholder {
+    height: 1em;
+}

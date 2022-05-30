@@ -1,0 +1,13 @@
+.lang-switcher {
+    button {
+        background: none;
+        padding: 5px 10px;
+        color: #fff;
+        border: 0;
+        cursor: pointer;
+
+        &:disabled {
+            color: #ccc;
+        }
+    }
+}
